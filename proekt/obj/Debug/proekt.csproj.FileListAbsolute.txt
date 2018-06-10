@@ -1,0 +1,11 @@
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.csprojResolveAssemblyReference.cache
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.Form1.resources
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.Form2.resources
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.Properties.Resources.resources
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.csproj.GenerateResource.Cache
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.csproj.CoreCompileInputs.cache
+C:\Users\Dona\source\repos\proekt\proekt\bin\Debug\proekt.exe.config
+C:\Users\Dona\source\repos\proekt\proekt\bin\Debug\proekt.exe
+C:\Users\Dona\source\repos\proekt\proekt\bin\Debug\proekt.pdb
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.exe
+C:\Users\Dona\source\repos\proekt\proekt\obj\Debug\proekt.pdb
