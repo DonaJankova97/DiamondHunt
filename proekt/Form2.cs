@@ -17,6 +17,7 @@ namespace proekt
         {
             InitializeComponent();
             korisnici = new Users();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace proekt
             {
                 a.Add(korisnici.getIgrac(i));
             }
-            textBox1.AutoCompleteSource = a;
+            //textBox1.AutoCompleteSource = a;
             //AutoCompleteSource = a;
             */
         }
