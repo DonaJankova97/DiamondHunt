@@ -46,6 +46,9 @@ namespace proekt
         {
             String s = textBox1.Text;
             korisnici.addUser(s);
+            DiamondHunt d = new DiamondHunt();
+            this.Close();
+            d.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

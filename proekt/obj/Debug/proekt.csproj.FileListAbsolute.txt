@@ -9,3 +9,14 @@ C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.csproj.GenerateResource.Cache
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.csproj.CoreCompileInputs.cache
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.exe
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.pdb
+C:\Users\User\DiamondHunt\proekt\bin\Debug\proekt.exe.config
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.exe
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.pdb
+C:\Users\User\DiamondHunt\proekt\bin\Debug\proekt.exe
+C:\Users\User\DiamondHunt\proekt\bin\Debug\proekt.pdb
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csprojResolveAssemblyReference.cache
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.DiamondHunt.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form1.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form2.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Properties.Resources.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csproj.GenerateResource.Cache

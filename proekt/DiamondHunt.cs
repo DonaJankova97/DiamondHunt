@@ -17,12 +17,9 @@ namespace proekt
         Point movingPlayer;
         static int width = 1000;
         static int height = 500;
+        int time;
+        ObstacleLine linija;
         public DiamondHunt()
-        {
-            InitializeComponent();
-        }
-
-        private void DiamondHunt_Load(object sender, EventArgs e)
         {
             InitializeComponent();
             Panel panel1 = new Panel();
@@ -30,16 +27,25 @@ namespace proekt
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Width = panel1.Width = width;
             this.Height = panel1.Height = height;
-            diamond = new Diamond(new Point(500, 400));
+            diamond = new Diamond(new Point(this.Width/2, this.Height));
             player = new Player();
             timer1.Interval = 1;
             timer1.Tick += timer1_Tick;
             timer1.Start();
+            laserTimer.Interval = 3;
+            laserTimer.Start();
+            time = 0;
+            linija = new ObstacleLine(this.Width, this.Height);
+        }
+
+        private void DiamondHunt_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            time++;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -47,12 +53,24 @@ namespace proekt
             Graphics graphics = e.Graphics;
             diamond.diamondDraw(graphics);
             player.drawPinkPanther(movingPlayer, graphics);
+
+            
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             movingPlayer = e.Location;
             Invalidate(true);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void laserTimer_Tick(object sender, EventArgs e)
+        {
+            linija.pomesti(g);
         }
     }
 }

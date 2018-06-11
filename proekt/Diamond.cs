@@ -25,8 +25,8 @@ namespace proekt
         {
             SolidBrush solidBrush = new SolidBrush(Color.LightGray);
             Pen pen = new Pen(solidBrush,10);
-            graphics.DrawImageUnscaled(diamond, positionDiamond.X,positionDiamond.Y,diamond.Width,diamond.Height);
-            graphics.DrawRectangle(pen, squareAngle.X, squareAngle.Y, squareWidth, squareWidth);
+            graphics.DrawImageUnscaled(diamond, positionDiamond.X,positionDiamond.Y-diamond.Height,diamond.Width,diamond.Height);
+            graphics.DrawRectangle(pen, squareAngle.X+15, squareAngle.Y-diamond.Height, squareWidth, squareWidth);
             pen.Dispose();
         }
        
