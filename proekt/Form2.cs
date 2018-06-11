@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace proekt
@@ -37,14 +38,8 @@ namespace proekt
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*AutoCompleteStringCollection a = new AutoCompleteStringCollection();
-            for(int i=0; i<korisnici.size(); i++)
-            {
-                a.Add(korisnici.getIgrac(i));
-            }
-            //textBox1.AutoCompleteSource = a;
-            //AutoCompleteSource = a;
-            */
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

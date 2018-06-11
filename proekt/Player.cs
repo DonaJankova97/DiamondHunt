@@ -10,7 +10,7 @@ namespace proekt
     class Player
     {
         Image pinkPanther;
-        Graphics graphics;
+        //Graphics graphics;
         public Player()
         {
             pinkPanther = proekt.Properties.Resources.pinkPanther;
