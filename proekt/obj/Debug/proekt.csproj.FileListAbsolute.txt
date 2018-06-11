@@ -20,3 +20,4 @@ C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form1.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form2.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Properties.Resources.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csproj.GenerateResource.Cache
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csproj.CoreCompileInputs.cache

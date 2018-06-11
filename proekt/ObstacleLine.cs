@@ -13,21 +13,23 @@ namespace proekt
     {
         Random r;
         double x1, x2, y1, y2;
+        double angle;
+        int length;
         public ObstacleLine(int width, int height)
         {
             r = new Random();
+            length = 100;
+            angle = r.Next(0, 360);
             x1 = r.Next(1, width);
             y1 = 0;
-            x2 = r.Next(-10, width+10);
-            y2 = r.Next(-50,1);
-            
-
+            x2 = x1 + Math.Cos(angle) * length;
+            y2 = y1 + Math.Sin(angle) * length;
 
         }
-        public void drawLine(double x1, double y1, double x2, double y2,Graphics g)
+        public void drawLine(double x1, double y1, double x2, double y2, Graphics g)
         {
-            Pen pen = new Pen(Color.Green);
-            Point point1 = new Point((int)x1,(int) y1);
+            Pen pen = new Pen(Color.Green, 3);
+            Point point1 = new Point((int)x1, (int)y1);
             Point point2 = new Point((int)x2, (int)y2);
             g.DrawLine(pen, point1, point2);
             pen.Dispose();
@@ -35,12 +37,11 @@ namespace proekt
         }
         public void pomesti(Graphics g)
         {
-            double k = (y2 - y1) / (x2 - x1);
-            double y1New = y1 + 1;
-            double x1New = (y1New - y1) / k + x1;
-
-            double y2New = y2 + 1;
-            double x2New = (y2New - y2) / k + x2;
+            length++;
+            double y1New = y1 + Math.Sin(angle) * length;
+            double x1New = x1 + Math.Cos(angle) * length;
+            double y2New = y2 + Math.Sin(angle) * length;
+            double x2New = x2 + Math.Cos(angle) * length;
 
             drawLine((int)x1New, (int)y1New, (int)x2New, (int)y2New, g);
             this.x1 = (int)x1New;
@@ -48,6 +49,13 @@ namespace proekt
             this.y1 = (int)y1New;
             this.y2 = (int)y2New;
         }
+        public bool removeLine(int width, int height)
+        {
+            if (x1 < 0 || x1 > width || y1 > height)
+                return true;
+            else
+                return false;
+        }
     }
-    
+
 }

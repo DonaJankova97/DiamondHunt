@@ -18,7 +18,7 @@ namespace proekt
         static int width = 1000;
         static int height = 500;
         int time;
-        ObstacleLine linija;
+        ObstacleLinesDoc lines;
         public DiamondHunt()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace proekt
             laserTimer.Interval = 3;
             laserTimer.Start();
             time = 0;
-            linija = new ObstacleLine(this.Width, this.Height);
+            lines = new ObstacleLinesDoc();
         }
 
         private void DiamondHunt_Load(object sender, EventArgs e)
@@ -53,8 +53,8 @@ namespace proekt
             Graphics graphics = e.Graphics;
             diamond.diamondDraw(graphics);
             player.drawPinkPanther(movingPlayer, graphics);
+            lines.Draw(graphics);
 
-            
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -70,7 +70,20 @@ namespace proekt
 
         private void laserTimer_Tick(object sender, EventArgs e)
         {
-            linija.pomesti(g);
+            ObstacleLine line = new ObstacleLine(this.Width, this.Height);
+            lines.addLine(line);
+            //lines.checkLines(this.Width,this.Height);
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel1_Paint(object sender, PaintEventArgs e)
+        {
+            toolStripStatusLabel1.Text = String.Format("NumberLines: {0}", lines.NumberLines());
+
         }
     }
 }
