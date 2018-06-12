@@ -29,5 +29,10 @@ namespace proekt
             f.Show();
 
         }
+
+        private void WinGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
