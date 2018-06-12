@@ -33,6 +33,7 @@ namespace proekt
 
         private void button4_Click(object sender, EventArgs e)
         {
+
             Application.Exit();
         }
 
@@ -55,12 +56,18 @@ namespace proekt
         {
             String s = textBox1.Text;
             korisnici.addUser(s);
+            MediumLevel m = new MediumLevel();
+            this.Close();
+            m.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             String s = textBox1.Text;
             korisnici.addUser(s);
+            HardLevel h = new HardLevel();
+            this.Close();
+            h.Show();
         }
 
         private void textBox1_Validating(object sender, CancelEventArgs e)

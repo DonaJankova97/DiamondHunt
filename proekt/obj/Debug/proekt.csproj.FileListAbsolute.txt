@@ -20,4 +20,7 @@ C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form1.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Form2.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.Properties.Resources.resources
 C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csproj.GenerateResource.Cache
-C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.csproj.CoreCompileInputs.cache
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.HardLevel.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.LoseGame.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.WinGame.resources
+C:\Users\User\DiamondHunt\proekt\obj\Debug\proekt.MediumLevel.resources
