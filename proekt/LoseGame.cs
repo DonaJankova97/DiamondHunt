@@ -15,8 +15,18 @@ namespace proekt
         public LoseGame()
         {
             InitializeComponent();
+            
             losetext2.Text = "Your score is:";
+
            
+        }
+        public LoseGame(int value)
+        {
+            InitializeComponent();
+            int score = value;
+            losetext2.Text = "Your score is:" + value;
+
+
         }
 
         private void LoseGame_Load(object sender, EventArgs e)

@@ -17,13 +17,12 @@ namespace proekt
         int gravity = 5;
         int score = 0;
      
-        public HardLevel()
+        public HardLevel(String Value)
         {
             InitializeComponent();
 
-            endtext1.Visible = false;
-            endtext2.Visible = false;
-            score1.Visible = true;
+            label1.Text = Value;
+    
             Diamond.Visible = false;
 
         }
@@ -33,9 +32,10 @@ namespace proekt
         }
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            bottomwall.Left -= speed;
+            
             topwall.Left -= speed;
             middlewall.Left -= speed;
+            bottomwall.Left -= speed;
             pinkpanther.Top += gravity;
             score1.Text = "" + score;
             diamond1.Left -= speed;
@@ -67,9 +67,9 @@ namespace proekt
 
             if (pinkpanther.Bounds.IntersectsWith(bottomwall.Bounds))
                 end_game();
-            else if (pinkpanther.Bounds.IntersectsWith(topwall.Bounds))
-                end_game();
             else if (pinkpanther.Bounds.IntersectsWith(middlewall.Bounds))
+                end_game();
+            else if (pinkpanther.Bounds.IntersectsWith(topwall.Bounds))
                 end_game();
             else if (pinkpanther.Bounds.IntersectsWith(floor.Bounds))
                 end_game();
@@ -125,12 +125,12 @@ namespace proekt
                 spike2.Left = 900;
             }
 
-            if (score == 10)
+            if (score == 15)
             {
                 Diamond.Visible = true;
                 bottomwall.Visible = false;
-                topwall.Visible = false;
-                middlewall.Visible = false;
+                bottomwall.Visible = false;
+                bottomwall.Visible = false;
                 diamond1.Visible = false;
                 diamond2.Visible = false;
                 spike1.Visible = false;
@@ -172,10 +172,10 @@ namespace proekt
             }
             else
             {
-                endtext1.Text = "Game Over!";
-                endtext2.Text = "Your score is:" + score;
-                endtext1.Visible = true;
-                endtext2.Visible = true;
+                this.Close();
+                LoseGame l = new LoseGame(score);
+                l.Show();
+
 
             }
         }
@@ -185,4 +185,5 @@ namespace proekt
 
         }
     }
+  
 }

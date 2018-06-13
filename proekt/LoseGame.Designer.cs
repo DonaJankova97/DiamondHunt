@@ -53,7 +53,7 @@
             this.losetext2.BackColor = System.Drawing.Color.Transparent;
             this.losetext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.losetext2.ForeColor = System.Drawing.Color.DarkRed;
-            this.losetext2.Location = new System.Drawing.Point(231, 117);
+            this.losetext2.Location = new System.Drawing.Point(179, 117);
             this.losetext2.Name = "losetext2";
             this.losetext2.Size = new System.Drawing.Size(69, 25);
             this.losetext2.TabIndex = 1;

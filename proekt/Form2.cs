@@ -63,9 +63,10 @@ namespace proekt
 
         private void button3_Click(object sender, EventArgs e)
         {
+           
             String s = textBox1.Text;
             korisnici.addUser(s);
-            HardLevel h = new HardLevel();
+            HardLevel h = new HardLevel(textBox1.Text);
             this.Close();
             h.Show();
         }
@@ -82,6 +83,11 @@ namespace proekt
                 errorProvider1.SetError(textBox1, "Invalid name");
                 e.Cancel = true;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+         
         }
     }
 }
