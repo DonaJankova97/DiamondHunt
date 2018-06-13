@@ -35,11 +35,24 @@ namespace proekt
             timer5.Start();
             timer6.Start();
             //timer1.Tick += new EventHandler(timer1_Tick);
+            //time = 0;
+            laser.Visible = false;
             left = false;
             right = false;
             down = false;
             up = false;
             position = pozicija.right;
+            boxOpened1.Visible = false;
+            boxOpened2.Visible = false;
+            boxOpened3.Visible = false;
+            diamond.Visible = false;
+
+        }
+
+        private void MediumLevel_Paint(object sender, PaintEventArgs e)
+        {
+
+
         }
 
         private void MediumLevel_Load(object sender, EventArgs e)
@@ -81,6 +94,12 @@ namespace proekt
 
             if (pictureBox9.Top <= -361) pictureBox9.Top = this.Height;
             else pictureBox9.Top -= 5;
+
+            if (laser.Visible)
+            {
+                if (laser.Top >= this.Height) laser.Top = -195;
+                else laser.Top += 5;
+            }
         }
 
         private void timer5_Tick(object sender, EventArgs e)
@@ -156,14 +175,90 @@ namespace proekt
             else if (pinkPanter.Bounds.IntersectsWith(pictureBox8.Bounds)) endGame();
             else if (pinkPanter.Bounds.IntersectsWith(pictureBox9.Bounds)) endGame();
             else if (pinkPanter.Bounds.IntersectsWith(pictureBox10.Bounds)) endGame();
-            else if (pinkPanter.Bounds.IntersectsWith(diamond.Bounds))
+            else if (laser.Visible && pinkPanter.Bounds.IntersectsWith(laser.Bounds)) endGame();
+            else if (boxClosed1.Visible && pinkPanter.Bounds.IntersectsWith(boxClosed1.Bounds))
+            {
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(494, 86);
+                boxClosed1.Visible = false;
+                boxOpened1.Visible = true;
+                //boxClosed2.Visible = true;
+                NextStep n = new NextStep("Go ist, to the center,\nthat is where another box\nyou will find!");
+                n.Show();
+
+
+            }
+            else if (boxOpened1.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened1.Bounds))
+            {
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(494, 86);
+                NextStep n = new NextStep("Go ist, to the center,\nthat is where another box\nyou will find!");
+                n.Show();
+            }
+            else if (boxOpened1.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened2.Bounds))
+            {
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(792, 213);
+                boxOpened2.Visible = true;
+                NextStep n = new NextStep("After the first block,\nat the bottom\nis where you need to go!");
+                n.Show();
+                // boxClosed3.Visible = true;
+            }
+            else if (boxOpened2.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened2.Bounds))
+            {
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(792, 213);
+                NextStep n = new NextStep("After the first block,\nat the bottom\nis where you need to go!");
+                n.Show();
+            }
+            else if (boxOpened2.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened3.Bounds))
+            {
+                //boxClosed3.Visible = false;
+                boxOpened3.Visible = true;
+                diamond.Visible = true;
+                laser.Visible = true;
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(195, 308);
+                NextStep n = new NextStep("Watch out\nfor the laser\n and\nget the diamond!");
+                n.Show();
+            }
+            else if (boxOpened3.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened3.Bounds))
+            {
+                left = false;
+                right = false;
+                down = false;
+                up = false;
+                pinkPanter.Location = new Point(195, 308);
+                NextStep n = new NextStep("Watch out\nfor the laser\n and\nget the diamond!");
+                n.Show();
+            }
+            else if (diamond.Visible && pinkPanter.Bounds.IntersectsWith(diamond.Bounds))
             {
                 diamond.Visible = false;
                 this.Close();
                 WinGame w = new WinGame();
                 w.Show();
-                //endGame();
             }
+
+        }
+
+        private void diamond_Click(object sender, EventArgs e)
+        {
 
         }
     }

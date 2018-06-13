@@ -48,6 +48,11 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.boxClosed1 = new System.Windows.Forms.PictureBox();
+            this.boxOpened1 = new System.Windows.Forms.PictureBox();
+            this.boxOpened2 = new System.Windows.Forms.PictureBox();
+            this.boxOpened3 = new System.Windows.Forms.PictureBox();
+            this.laser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pinkPanter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,6 +65,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxClosed1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laser)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -96,7 +106,7 @@
             // 
             this.pinkPanter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pinkPanter.Image = global::proekt.Properties.Resources.pinkPanther;
-            this.pinkPanter.Location = new System.Drawing.Point(12, 198);
+            this.pinkPanter.Location = new System.Drawing.Point(12, 147);
             this.pinkPanter.Name = "pinkPanter";
             this.pinkPanter.Size = new System.Drawing.Size(40, 40);
             this.pinkPanter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +126,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(281, 354);
+            this.pictureBox2.Location = new System.Drawing.Point(270, 354);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 260);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,9 +166,9 @@
             // diamond
             // 
             this.diamond.Image = global::proekt.Properties.Resources.Diamond;
-            this.diamond.Location = new System.Drawing.Point(847, 184);
+            this.diamond.Location = new System.Drawing.Point(359, 136);
             this.diamond.Name = "diamond";
-            this.diamond.Size = new System.Drawing.Size(93, 72);
+            this.diamond.Size = new System.Drawing.Size(53, 51);
             this.diamond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.diamond.TabIndex = 27;
             this.diamond.TabStop = false;
@@ -176,7 +186,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(281, 29);
+            this.pictureBox7.Location = new System.Drawing.Point(272, 29);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(51, 260);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,11 +223,67 @@
             this.pictureBox10.TabIndex = 32;
             this.pictureBox10.TabStop = false;
             // 
+            // boxClosed1
+            // 
+            this.boxClosed1.Image = ((System.Drawing.Image)(resources.GetObject("boxClosed1.Image")));
+            this.boxClosed1.Location = new System.Drawing.Point(474, 12);
+            this.boxClosed1.Name = "boxClosed1";
+            this.boxClosed1.Size = new System.Drawing.Size(79, 57);
+            this.boxClosed1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxClosed1.TabIndex = 34;
+            this.boxClosed1.TabStop = false;
+            // 
+            // boxOpened1
+            // 
+            this.boxOpened1.Image = ((System.Drawing.Image)(resources.GetObject("boxOpened1.Image")));
+            this.boxOpened1.Location = new System.Drawing.Point(474, 9);
+            this.boxOpened1.Name = "boxOpened1";
+            this.boxOpened1.Size = new System.Drawing.Size(78, 71);
+            this.boxOpened1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxOpened1.TabIndex = 37;
+            this.boxOpened1.TabStop = false;
+            // 
+            // boxOpened2
+            // 
+            this.boxOpened2.Image = ((System.Drawing.Image)(resources.GetObject("boxOpened2.Image")));
+            this.boxOpened2.Location = new System.Drawing.Point(771, 136);
+            this.boxOpened2.Name = "boxOpened2";
+            this.boxOpened2.Size = new System.Drawing.Size(78, 71);
+            this.boxOpened2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxOpened2.TabIndex = 38;
+            this.boxOpened2.TabStop = false;
+            // 
+            // boxOpened3
+            // 
+            this.boxOpened3.Image = ((System.Drawing.Image)(resources.GetObject("boxOpened3.Image")));
+            this.boxOpened3.Location = new System.Drawing.Point(182, 354);
+            this.boxOpened3.Name = "boxOpened3";
+            this.boxOpened3.Size = new System.Drawing.Size(78, 71);
+            this.boxOpened3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxOpened3.TabIndex = 39;
+            this.boxOpened3.TabStop = false;
+            // 
+            // laser
+            // 
+            this.laser.BackColor = System.Drawing.Color.Transparent;
+            this.laser.Image = ((System.Drawing.Image)(resources.GetObject("laser.Image")));
+            this.laser.Location = new System.Drawing.Point(330, -125);
+            this.laser.Name = "laser";
+            this.laser.Size = new System.Drawing.Size(15, 195);
+            this.laser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.laser.TabIndex = 40;
+            this.laser.TabStop = false;
+            // 
             // MediumLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 431);
+            this.ClientSize = new System.Drawing.Size(861, 431);
+            this.Controls.Add(this.laser);
+            this.Controls.Add(this.boxOpened3);
+            this.Controls.Add(this.boxOpened2);
+            this.Controls.Add(this.boxOpened1);
+            this.Controls.Add(this.boxClosed1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -251,6 +317,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxClosed1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxOpened3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +346,10 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox boxClosed1;
+        private System.Windows.Forms.PictureBox boxOpened1;
+        private System.Windows.Forms.PictureBox boxOpened2;
+        private System.Windows.Forms.PictureBox boxOpened3;
+        private System.Windows.Forms.PictureBox laser;
     }
 }

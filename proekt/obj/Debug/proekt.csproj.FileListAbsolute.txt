@@ -29,3 +29,5 @@ C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.HardLevel.resources
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.LoseGame.resources
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.MediumLevel.resources
 C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.WinGame.resources
+C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.Instructions.resources
+C:\Users\Dona\proektVp\proekt\obj\Debug\proekt.NextStep.resources

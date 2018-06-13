@@ -69,6 +69,12 @@
     <Compile Include="HardLevel.Designer.cs">
       <DependentUpon>HardLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Instructions-medium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions-medium.Designer.cs">
+      <DependentUpon>Instructions-medium.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoseGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="MediumLevel.Designer.cs">
       <DependentUpon>MediumLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NextStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NextStep.Designer.cs">
+      <DependentUpon>NextStep.cs</DependentUpon>
     </Compile>
     <Compile Include="ObstacleLine.cs" />
     <Compile Include="ObstacleLinesDoc.cs" />
@@ -105,11 +117,17 @@
     <EmbeddedResource Include="HardLevel.resx">
       <DependentUpon>HardLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Instructions-medium.resx">
+      <DependentUpon>Instructions-medium.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoseGame.resx">
       <DependentUpon>LoseGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MediumLevel.resx">
       <DependentUpon>MediumLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NextStep.resx">
+      <DependentUpon>NextStep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
