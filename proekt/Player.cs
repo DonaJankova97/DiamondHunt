@@ -9,17 +9,25 @@ namespace proekt
 {
     class Player
     {
-        Image pinkPanther;
-        //Graphics graphics;
-        public Player()
+
+        public Image pinkPanther { get; }
+        public Point playerPosition { get; set; }
+
+        public Player(Point point)
         {
             pinkPanther = proekt.Properties.Resources.pinkPanther;
-            
+            playerPosition = point;
+
         }
-        public void drawPinkPanther(Point point,Graphics graphics)
+        public void drawPinkPanther(Graphics graphics)
         {
-           graphics.DrawImageUnscaled(pinkPanther, point.X-pinkPanther.Size.Width/2,point.Y-pinkPanther.Size.Height/2);
-            
+            graphics.DrawImageUnscaled(pinkPanther, playerPosition.X - pinkPanther.Size.Width / 2, playerPosition.Y - pinkPanther.Size.Height / 2);
+
         }
+        public void movePlayer(Point point)
+        {
+            playerPosition = point;
+        }
+
     }
 }

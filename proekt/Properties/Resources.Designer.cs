@@ -83,6 +83,16 @@ namespace proekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap laserline {
+            get {
+                object obj = ResourceManager.GetObject("laserline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pinkPanther {
             get {
                 object obj = ResourceManager.GetObject("pinkPanther", resourceCulture);

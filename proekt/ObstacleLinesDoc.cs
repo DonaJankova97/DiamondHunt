@@ -38,6 +38,17 @@ namespace proekt
                 if (ol.removeLine(width, height))
                     lines.Remove(ol);
         }
+        public void Move(Graphics g)
+        {
+            foreach (ObstacleLine line in lines)
+            {
+                line.pomesti(g);
+            }
+        }
+       
 
     }
+   
+
+    
 }
