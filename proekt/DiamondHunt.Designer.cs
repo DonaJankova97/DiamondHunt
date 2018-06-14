@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondHunt));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pinkPanther = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.laserTimer = new System.Windows.Forms.Timer(this.components);
-            this.pinkPanther = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pinkPanther)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +56,25 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // pinkPanther
+            // 
+            this.pinkPanther.Image = ((System.Drawing.Image)(resources.GetObject("pinkPanther.Image")));
+            this.pinkPanther.Location = new System.Drawing.Point(398, 191);
+            this.pinkPanther.Name = "pinkPanther";
+            this.pinkPanther.Size = new System.Drawing.Size(54, 50);
+            this.pinkPanther.TabIndex = 3;
+            this.pinkPanther.TabStop = false;
+            this.pinkPanther.Click += new System.EventHandler(this.pinkPanther_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 432);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -77,27 +96,14 @@
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             this.toolStripStatusLabel1.Paint += new System.Windows.Forms.PaintEventHandler(this.toolStripStatusLabel1_Paint);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // laserTimer
             // 
             this.laserTimer.Tick += new System.EventHandler(this.laserTimer_Tick);
-            // 
-            // pinkPanther
-            // 
-            this.pinkPanther.Image = ((System.Drawing.Image)(resources.GetObject("pinkPanther.Image")));
-            this.pinkPanther.Location = new System.Drawing.Point(398, 191);
-            this.pinkPanther.Name = "pinkPanther";
-            this.pinkPanther.Size = new System.Drawing.Size(54, 50);
-            this.pinkPanther.TabIndex = 3;
-            this.pinkPanther.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 432);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // DiamondHunt
             // 
@@ -111,12 +117,14 @@
             this.Name = "DiamondHunt";
             this.Text = "Diamond Hunt";
             this.Load += new System.EventHandler(this.DiamondHunt_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DiamondHunt_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DiamondHunt_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pinkPanther)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }

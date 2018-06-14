@@ -122,6 +122,11 @@ namespace proekt
 
         }
 
+        private void pinkPanther_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void laserTimer_Tick(object sender, EventArgs e)
         {
             ObstacleLine line = new ObstacleLine(this.Width, this.Height);
