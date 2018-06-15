@@ -68,7 +68,6 @@
             this.MinimizeBox = false;
             this.Name = "NextStep";
             this.Text = "Next Step";
-            this.Load += new System.EventHandler(this.NextStep_Load);
             this.ResumeLayout(false);
 
         }

@@ -301,8 +301,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MediumLevel";
-            this.Text = "Medium Level";
-            this.Load += new System.EventHandler(this.MediumLevel_Load);
+            this.Text = "Diamond Hunt - Medium Level";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MediumLevel_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MediumLevel_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MediumLevel_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pinkPanter)).EndInit();

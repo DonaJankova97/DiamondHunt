@@ -12,6 +12,7 @@ namespace proekt
 {
     public partial class LoseGame : Form
     {
+       
         public LoseGame()
         {
             InitializeComponent();
@@ -29,11 +30,6 @@ namespace proekt
 
         }
 
-        private void LoseGame_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -44,6 +40,11 @@ namespace proekt
             this.Hide();
             Form2 f = new Form2();
             f.Show();
+        }
+
+        private void LoseGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

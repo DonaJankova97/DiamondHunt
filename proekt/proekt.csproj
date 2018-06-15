@@ -44,12 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Diamond.cs" />
-    <Compile Include="DiamondHunt.cs">
+    <Compile Include="EasyLevel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiamondHunt.Designer.cs">
-      <DependentUpon>DiamondHunt.cs</DependentUpon>
+    <Compile Include="EasyLevel.Designer.cs">
+      <DependentUpon>EasyLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -69,11 +68,11 @@
     <Compile Include="HardLevel.Designer.cs">
       <DependentUpon>HardLevel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instructions-medium.cs">
+    <Compile Include="Instructions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Instructions-medium.Designer.cs">
-      <DependentUpon>Instructions-medium.cs</DependentUpon>
+    <Compile Include="Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
     </Compile>
     <Compile Include="LoseGame.cs">
       <SubType>Form</SubType>
@@ -95,18 +94,22 @@
     </Compile>
     <Compile Include="ObstacleLine.cs" />
     <Compile Include="ObstacleLinesDoc.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Users.cs" />
+    <Compile Include="ViewPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPlayers.Designer.cs">
+      <DependentUpon>ViewPlayers.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinGame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WinGame.Designer.cs">
       <DependentUpon>WinGame.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DiamondHunt.resx">
-      <DependentUpon>DiamondHunt.cs</DependentUpon>
+    <EmbeddedResource Include="EasyLevel.resx">
+      <DependentUpon>EasyLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,8 +120,8 @@
     <EmbeddedResource Include="HardLevel.resx">
       <DependentUpon>HardLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instructions-medium.resx">
-      <DependentUpon>Instructions-medium.cs</DependentUpon>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoseGame.resx">
       <DependentUpon>LoseGame.cs</DependentUpon>
@@ -139,6 +142,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ViewPlayers.resx">
+      <DependentUpon>ViewPlayers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinGame.resx">
       <DependentUpon>WinGame.cs</DependentUpon>
     </EmbeddedResource>

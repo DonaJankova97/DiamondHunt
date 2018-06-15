@@ -24,14 +24,9 @@ namespace proekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Form2 f = new Form2();
             f.Show();
-
-        }
-
-        private void WinGame_Load(object sender, EventArgs e)
-        {
 
         }
     }

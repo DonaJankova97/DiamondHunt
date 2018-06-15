@@ -12,7 +12,7 @@ namespace proekt
 {
     public partial class MediumLevel : Form
     {
-        //int time;
+        
         enum pozicija
         {
             up,
@@ -34,8 +34,6 @@ namespace proekt
             timer4.Start();
             timer5.Start();
             timer6.Start();
-            //timer1.Tick += new EventHandler(timer1_Tick);
-            //time = 0;
             laser.Visible = false;
             left = false;
             right = false;
@@ -46,17 +44,6 @@ namespace proekt
             boxOpened2.Visible = false;
             boxOpened3.Visible = false;
             diamond.Visible = false;
-
-        }
-
-        private void MediumLevel_Paint(object sender, PaintEventArgs e)
-        {
-
-
-        }
-
-        private void MediumLevel_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -144,8 +131,9 @@ namespace proekt
             timer4.Stop();
             timer5.Stop();
             timer6.Stop();
-            this.Close();
+            this.Hide();
             LoseGame l = new LoseGame();
+            l.losetext2.Visible = false;
             l.Show();
 
         }
@@ -185,11 +173,9 @@ namespace proekt
                 pinkPanter.Location = new Point(494, 86);
                 boxClosed1.Visible = false;
                 boxOpened1.Visible = true;
-                //boxClosed2.Visible = true;
                 NextStep n = new NextStep("Go ist, to the center,\nthat is where another box\nyou will find!");
                 n.Show();
-
-
+                
             }
             else if (boxOpened1.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened1.Bounds))
             {
@@ -198,7 +184,7 @@ namespace proekt
                 down = false;
                 up = false;
                 pinkPanter.Location = new Point(494, 86);
-                NextStep n = new NextStep("Go ist, to the center,\nthat is where another box\nyou will find!");
+                NextStep n = new NextStep("Go east, to the center,\nthat is where another box\nyou will find!");
                 n.Show();
             }
             else if (boxOpened1.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened2.Bounds))
@@ -211,7 +197,6 @@ namespace proekt
                 boxOpened2.Visible = true;
                 NextStep n = new NextStep("After the first block,\nat the bottom\nis where you need to go!");
                 n.Show();
-                // boxClosed3.Visible = true;
             }
             else if (boxOpened2.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened2.Bounds))
             {
@@ -225,7 +210,6 @@ namespace proekt
             }
             else if (boxOpened2.Visible && pinkPanter.Bounds.IntersectsWith(boxOpened3.Bounds))
             {
-                //boxClosed3.Visible = false;
                 boxOpened3.Visible = true;
                 diamond.Visible = true;
                 laser.Visible = true;
@@ -250,16 +234,22 @@ namespace proekt
             else if (diamond.Visible && pinkPanter.Bounds.IntersectsWith(diamond.Bounds))
             {
                 diamond.Visible = false;
-                this.Close();
+                timer1.Start();
+                timer2.Start();
+                timer3.Start();
+                timer4.Start();
+                timer5.Start();
+                timer6.Start();
+                this.Hide();
                 WinGame w = new WinGame();
                 w.Show();
             }
 
         }
 
-        private void diamond_Click(object sender, EventArgs e)
+        private void MediumLevel_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

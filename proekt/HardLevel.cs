@@ -12,7 +12,6 @@ namespace proekt
 {
     public partial class HardLevel : Form
     {
-        bool jumping = false;
         int speed = 5;
         int gravity = 5;
         int score = 0;
@@ -20,15 +19,12 @@ namespace proekt
         public HardLevel(String Value)
         {
             InitializeComponent();
-
             label1.Text = Value;
-    
             Diamond.Visible = false;
-
         }
-        private void HardLevel_Load(object sender, EventArgs e)
+        public void timerStart()
         {
-
+            gameTimer.Start();
         }
         private void gameTimer_Tick(object sender, EventArgs e)
         {
@@ -150,13 +146,11 @@ namespace proekt
         {
             if (e.KeyCode == Keys.Space)
             {
-                jumping = true;
                 gravity = -5;
             }
         }
         private void GameKeyUp(object sender, KeyEventArgs e)
         {
-            jumping = false;
             gravity = 5;
 
         }
@@ -166,13 +160,13 @@ namespace proekt
             gameTimer.Stop();
             if (score == 10)
             {
-                this.Close();
+                this.Hide();
                 WinGame w = new WinGame();
                 w.Show();
             }
             else
             {
-                this.Close();
+                this.Hide();
                 LoseGame l = new LoseGame(score);
                 l.Show();
 
@@ -180,9 +174,9 @@ namespace proekt
             }
         }
 
-        private void HardLevel_Load_1(object sender, EventArgs e)
+        private void HardLevel_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
     }
   
