@@ -16,7 +16,7 @@ namespace proekt
         public ViewPlayers()
         {
             InitializeComponent();
-            StreamReader file = new StreamReader(@"C:\Users\Dona\proektVp\players.txt", true);
+            StreamReader file = new StreamReader(@"players.txt", true);
             String s;
             while ((s=file.ReadLine())!=null)
             {
