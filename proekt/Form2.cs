@@ -33,7 +33,7 @@ namespace proekt
         private void button1_Click(object sender, EventArgs e)
         {
             String s = textBox1.Text;
-            StreamWriter file = new StreamWriter(@"C:\Users\Dona\proektVp\players.txt", true);
+            StreamWriter file = new StreamWriter(@"players.txt", true);
             s = String.Format("{0} - {1}", s, "Easy level");
             file.WriteLine(s);
             file.Close();
@@ -52,7 +52,7 @@ namespace proekt
         {
             
             String s = textBox1.Text;
-            StreamWriter file = new StreamWriter(@"C:\Users\Dona\proektVp\players.txt", true);
+            StreamWriter file = new StreamWriter(@"players.txt", true);
             s = String.Format("{0} - {1}", s, "Medium level");
             file.WriteLine(s);
             file.Close();          
@@ -69,7 +69,7 @@ namespace proekt
         {
            
             String s = textBox1.Text;
-            StreamWriter file = new StreamWriter(@"C:\Users\Dona\proektVp\players.txt", true);
+            StreamWriter file = new StreamWriter(@"players.txt", true);
             s=String.Format("{0} - {1}", s, "Hard level");
             file.WriteLine(s);
             file.Close();
